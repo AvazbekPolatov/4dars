@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Albom sahifasi">
+    <meta name="keywords" content="albom, reja, audio, video">
+    <meta name="author" content="To'xtov Toirov">
+    <title>Albom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; 
+        }
+        header {
+            background-color: #84c684;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .sidebar {
+            width: 30%;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #84c684;
+            color: white;
+            margin-top: 20px;
+        }
+        /* Mobil qurilmalar uchun moslashuvchan dizayn */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Albom</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar" role="navigation" aria-label="Asosiy navigatsiya">
+            <h3>Mavzu</h3>
+            <ul>
+                <li><a href="#reja1">Reja 1</a></li>
+                <li><a href="#reja2">Reja 2</a></li>
+            </ul>
+            <div class="audio-video">
+                <audio controls preload="metadata">
+                    <source src="audio.mp3" type="audio/mp3">
+                    Audio brauzeringizni qo'llab-quvvatlamaydi.
+                </audio>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="YouTube video"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </nav>
+
+        <main class="content" role="main">
+            <h2 id="mavzu">Mavzu</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+            <section id="reja1">
+                <h2>Reja 1</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <a href="#mavzu">Sahifa boshiga</a>
+            </section>
+
+            <section id="reja2" class="reja2">
+                <h2>Reja 2</h2>
+                <p>It is a long established fact that a reader will be distracted.</p>
+                <a href="#mavzu">Sahifa boshiga</a>
+            </section>
+
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/HluANRwPyNo" 
+                    title="YouTube video"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </main>
+    </div>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024. To'xtov Toirov.</p>
+    </footer>
+</body>
+</html>
